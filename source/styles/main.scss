@@ -54,8 +54,9 @@ body {
 }
 main {
   width: 1171px;
-  margin: 375px 375px auto;
+  margin: auto;
   margin-top: 95px;
+  transform: translateX(8px);
 
   h1 {
     font-family: "Lato";
@@ -112,7 +113,7 @@ main {
       color: $alert-1-close-solid;
     }
     &.solid::before{
-      background-color: transparent;
+      background-color: transparent !important;
     }
   }
   &.success {
@@ -206,8 +207,5 @@ main {
   &.lg {
     width: 100%;
     padding-right: 0px;
-    div {
-      padding-right: 50px;
-    }
   }
 }
