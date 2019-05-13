@@ -4,98 +4,28 @@
     height: 150px;
     border: solid $color-1 1px;
     border-radius: 11px;
-    font-family: 'Lato';
+    font-family: 'Lato', sans-serif;
 
     &::before {
         content: $alert-1-conentnt;
         display: flex;
-        background-color: $alert-1-bg;
         align-items: center;
         justify-content: center;
         width: 50px;
         height: 50px;
+        margin-top: 43px;
+        margin-right: 28px;
+        margin-left: 50px;
         float: left;
         border: solid $alert-1-border 7px;
         border-radius: 50%;
-        vertical-align: middle;
-        font-family: FontAwesome;
+        background-color: $alert-1-bg;
+        color: $alert-1-color;
+        font-family: 'FontAwesome', sans-serif;
         font-size: 24px;
         font-style: normal;
         font-weight: 900;
-        color: $alert-1-color;
-        margin-left: 50px;
-        margin-top: 43px;
-        margin-right: 28px;
-    }
-    &.solid {
-        background-color: $alert-1-bg-solid;
-
-        & > a {
-            color: $alert-1-close-solid;
-        }
-
-        &.solid::before {
-            background-color: transparent !important;
-        }
-    }
-    &.success {
-        &::before {
-            content: $alert-2-conentnt;
-            background-color: $alert-2-bg;
-            border: solid $alert-2-border 7px;
-            color: $alert-2-color;
-        }
-        &.solid {
-            background-color: $alert-2-bg-solid;
-            & > a {
-                color: $alert-2-close-solid;
-            }
-        }
-    }
-
-    &.error {
-        &::before {
-            content: $alert-3-conentnt;
-            border: solid $alert-3-border 7px;
-            background-color: $alert-3-bg;
-            color: $alert-3-color;
-        }
-        &.solid {
-            background-color: $alert-3-bg-solid;
-            & > a {
-                color: $alert-3-close-solid;
-            }
-        }
-    }
-
-    &.flash {
-        &::before {
-            content: $alert-4-conentnt;
-            border: solid $alert-4-border 7px;
-            background-color: $alert-4-bg;
-            color: $alert-4-color;
-        }
-        &.solid {
-            background-color: $alert-4-bg-solid;
-            & > a {
-                color: $alert-4-close-solid;
-            }
-        }
-    }
-
-    &.info.lg {
-        &::before {
-            content: $alert-5-conentnt;
-            border: solid $alert-5-border 7px;
-            background-color: $alert-5-bg;
-            color: $alert-5-color;
-        }
-        &.solid {
-            background-color: $alert-5-bg-solid;
-            & > a {
-                color: $alert-5-close-solid;
-            }
-        }
+        vertical-align: middle;
     }
 
     a {
@@ -104,8 +34,93 @@
         right: 17px;
         color: $color-4;
         text-decoration: none;
-        i {
+
+        span {
             font-size: 14px;
+        }
+    }
+
+    &.solid {
+        background-color: $alert-1-bg-solid;
+
+        & > a {
+            color: $alert-1-close-solid;
+        }
+
+        &.solid::before {
+            background-color: transparent;
+        }
+    }
+
+    &.success {
+
+        &::before {
+            content: $alert-2-conentnt;
+            border: solid $alert-2-border 7px;
+            background-color: $alert-2-bg;
+            color: $alert-2-color;
+        }
+
+        &.solid {
+            background-color: $alert-2-bg-solid;
+
+            & > a {
+                color: $alert-2-close-solid;
+            }
+        }
+    }
+
+    &.error {
+
+        &::before {
+            content: $alert-3-conentnt;
+            border: solid $alert-3-border 7px;
+            background-color: $alert-3-bg;
+            color: $alert-3-color;
+        }
+
+        &.solid {
+            background-color: $alert-3-bg-solid;
+
+            & > a {
+                color: $alert-3-close-solid;
+            }
+        }
+    }
+
+    &.flash {
+
+        &::before {
+            content: $alert-4-conentnt;
+            border: solid $alert-4-border 7px;
+            background-color: $alert-4-bg;
+            color: $alert-4-color;
+        }
+
+        &.solid {
+            background-color: $alert-4-bg-solid;
+
+            & > a {
+                color: $alert-4-close-solid;
+            }
+        }
+    }
+
+    &.info.lg {
+
+        &::before {
+            content: $alert-5-conentnt;
+            border: solid $alert-5-border 7px;
+            background-color: $alert-5-bg;
+            color: $alert-5-color;
+        }
+
+        &.solid {
+            background-color: $alert-5-bg-solid;
+
+            & > a {
+                color: $alert-5-close-solid;
+            }
         }
     }
 
