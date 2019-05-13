@@ -1,0 +1,136 @@
+.alert {
+    position: relative;
+    width: 570px;
+    height: 150px;
+    border: solid $color-1 1px;
+    border-radius: 11px;
+    font-family: 'Lato';
+
+    &::before {
+        content: $alert-1-conentnt;
+        display: flex;
+        background-color: $alert-1-bg;
+        align-items: center;
+        justify-content: center;
+        width: 50px;
+        height: 50px;
+        float: left;
+        border: solid $alert-1-border 7px;
+        border-radius: 50%;
+        vertical-align: middle;
+        font-family: FontAwesome;
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 900;
+        color: $alert-1-color;
+        margin-left: 50px;
+        margin-top: 43px;
+        margin-right: 28px;
+    }
+    &.solid {
+        background-color: $alert-1-bg-solid;
+
+        & > a {
+            color: $alert-1-close-solid;
+        }
+
+        &.solid::before {
+            background-color: transparent !important;
+        }
+    }
+    &.success {
+        &::before {
+            content: $alert-2-conentnt;
+            background-color: $alert-2-bg;
+            border: solid $alert-2-border 7px;
+            color: $alert-2-color;
+        }
+        &.solid {
+            background-color: $alert-2-bg-solid;
+            & > a {
+                color: $alert-2-close-solid;
+            }
+        }
+    }
+
+    &.error {
+        &::before {
+            content: $alert-3-conentnt;
+            border: solid $alert-3-border 7px;
+            background-color: $alert-3-bg;
+            color: $alert-3-color;
+        }
+        &.solid {
+            background-color: $alert-3-bg-solid;
+            & > a {
+                color: $alert-3-close-solid;
+            }
+        }
+    }
+
+    &.flash {
+        &::before {
+            content: $alert-4-conentnt;
+            border: solid $alert-4-border 7px;
+            background-color: $alert-4-bg;
+            color: $alert-4-color;
+        }
+        &.solid {
+            background-color: $alert-4-bg-solid;
+            & > a {
+                color: $alert-4-close-solid;
+            }
+        }
+    }
+
+    &.info.lg {
+        &::before {
+            content: $alert-5-conentnt;
+            border: solid $alert-5-border 7px;
+            background-color: $alert-5-bg;
+            color: $alert-5-color;
+        }
+        &.solid {
+            background-color: $alert-5-bg-solid;
+            & > a {
+                color: $alert-5-close-solid;
+            }
+        }
+    }
+
+    a {
+        position: absolute;
+        top: 14px;
+        right: 17px;
+        color: $color-4;
+        text-decoration: none;
+        i {
+            font-size: 14px;
+        }
+    }
+
+    div {
+        margin-top: 39px;
+        padding-right: 70px;
+        font-size: 14px;
+
+        h2 {
+            color: $color-2;
+            font-size: 14px;
+            font-weight: 900;
+            letter-spacing: 1.1px;
+            word-spacing: 2.3px;
+        }
+
+        p {
+            margin-top: 11px;
+            color: $color-3;
+            line-height: 24px;
+        }
+    }
+
+    &.lg {
+        width: 100%;
+        padding-right: 0;
+    }
+}

@@ -1,0 +1,26 @@
+main {
+    width: 1171px;
+    margin: auto;
+    margin-top: 95px;
+    transform: translateX(8px);
+
+    h1 {
+        margin-bottom: 48px;
+        transform: translateX(-2px);
+        font-family: 'Lato';
+        font-size: 30px;
+        font-weight: 300;
+    }
+}
+
+.alerts {
+    display: grid;
+    grid-row-gap: 30px;
+    grid-template-columns: 570px 570px;
+    
+    grid-column-gap: 30px;
+
+    .col:last-child {
+        grid-column: 1/3;
+    }
+}
