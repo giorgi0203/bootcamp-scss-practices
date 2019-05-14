@@ -1,7 +1,6 @@
 .alert {
     position: relative;
-    width: 570px;
-    height: 150px;
+    padding-left: 50px;
     border: solid $color-1 1px;
     border-radius: 11px;
     font-family: 'Lato', sans-serif;
@@ -15,7 +14,6 @@
         height: 50px;
         margin-top: 43px;
         margin-right: 28px;
-        margin-left: 50px;
         float: left;
         border: solid $alert-1-border 7px;
         border-radius: 50%;
@@ -35,7 +33,9 @@
         color: $color-4;
         text-decoration: none;
 
-        span {
+        &::before {
+            content: '\f00d';
+            font-family: 'FontAwesome', sans-serif;
             font-size: 14px;
         }
     }
@@ -49,6 +49,24 @@
 
         &.solid::before {
             background-color: transparent;
+        }
+    }
+
+    &.info {
+
+        &::before {
+            content: $alert-5-conentnt;
+            border: solid $alert-5-border 7px;
+            background-color: $alert-5-bg;
+            color: $alert-5-color;
+        }
+
+        &.solid {
+            background-color: $alert-5-bg-solid;
+
+            & > a {
+                color: $alert-5-close-solid;
+            }
         }
     }
 
@@ -106,26 +124,9 @@
         }
     }
 
-    &.info.lg {
-
-        &::before {
-            content: $alert-5-conentnt;
-            border: solid $alert-5-border 7px;
-            background-color: $alert-5-bg;
-            color: $alert-5-color;
-        }
-
-        &.solid {
-            background-color: $alert-5-bg-solid;
-
-            & > a {
-                color: $alert-5-close-solid;
-            }
-        }
-    }
-
     div {
         margin-top: 39px;
+        margin-bottom: 39px;
         padding-right: 70px;
         font-size: 14px;
 
@@ -142,10 +143,5 @@
             color: $color-3;
             line-height: 24px;
         }
-    }
-
-    &.lg {
-        width: 100%;
-        padding-right: 0;
     }
 }
